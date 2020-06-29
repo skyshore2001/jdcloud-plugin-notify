@@ -1,0 +1,9 @@
+<form id="dlgNotify" title="系统通知" style="width:640px;height:500px;" wui-script="dlgNotify.js" my-initfn="initDlgNotify">  
+	<table id="tblNotify" style="width:auto;height:100%">
+		<thead><tr>
+			<th data-options="field:'type', width:'100', formatter: Formatter.enum(NotifyColumns.TypeMap), sortable: true">类别</th>
+			<th data-options="field:'tm', width:'100', sortable: true">时间</th>
+			<th data-options="field:'name', width:'200', formatter:NotifyColumns.name, sortable: true">通知</th>
+		</tr></thead>
+	</table>
+</form>
