@@ -1,4 +1,5 @@
 window.Notify = {
+	UPDATE_INTERVAL: 5*60, // 默认5分钟刷新一次消息；单位：秒。
 	jo_: null,
 	jmsgNum_: null,
 	tmr_: null,
@@ -27,7 +28,7 @@ window.Notify = {
 		});
 		if (this.tmr_)
 			clearInterval(this.tmr_);
-		this.tmr_ = setTimeout(this.refresh.bind(this), 60000*5);
+		this.tmr_ = setTimeout(this.refresh.bind(this), this.UPDATE_INTERVAL * 1000);
 	}
 };
 

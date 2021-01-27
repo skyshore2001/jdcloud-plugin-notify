@@ -64,3 +64,10 @@ query接口返回列表格式，可以是 `{h, d}`或`[{type, tm, ...}]`或`{lis
 
 然后根据业务需求修改 web/page/dlgNotify.js 中的通知显示和页面跳转逻辑。
 
+默认是5分钟刷新一次消息。如需要修改，检查store.js: 
+
+	window.Notify = {
+		UPDATE_INTERVAL: 5*60, // 默认5分钟刷新一次消息
+		...
+	}
+
